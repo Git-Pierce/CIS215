@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> CSS Grids</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: 70% 30%;
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+            grid-gap: 2em;
+        }
+
+        .wrapper > div {
+        background: grey;
+        padding: 1em;
+        }
+        .wrapper > div:nth-child(odd){
+            background: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi cupiditate delectus nobis eius nemo, nam quia cumque maiores illo ex suscipit veniam praesentium, nisi consequatur labore consequuntur repudiandae cum. Non maxime libero, ex quisquam a totam cumque, adipisci quam dolorum, assumenda ducimus eligendi rem aspernatur voluptate vel, dolore corporis ullam dolores inventore sequi. Est, in atque. Perspiciatis ab cumque sed ducimus amet eveniet dolore omnis incidunt quas qui quos, dignissimos maiores est nihil, tempora at, aliquid harum officia. Corporis, possimus.</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio repudiandae doloribus, dolor fuga, nostrum quae quo blanditiis voluptatum veritatis facere, est similique iusto porro magni. Pariatur ipsa omnis quasi reiciendis accusantium, rem obcaecati expedita, aut soluta perspiciatis consequuntur nisi mollitia.</div>
+         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi cupiditate delectus nobis eius nemo, nam quia cumque maiores illo ex suscipit veniam praesentium, nisi consequatur labore consequuntur repudiandae cum. Non maxime libero, ex quisquam a totam cumque, adipisci quam dolorum, assumenda ducimus eligendi rem aspernatur voluptate vel, dolore corporis ullam dolores inventore sequi. Est, in atque. Perspiciatis ab cumque sed ducimus amet eveniet dolore omnis incidunt quas qui quos, dignissimos maiores est nihil, tempora at, aliquid harum officia. Corporis, possimus.</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio repudiandae doloribus, dolor fuga, nostrum quae quo blanditiis voluptatum veritatis facere, est similique iusto porro magni. Pariatur ipsa omnis quasi reiciendis accusantium, rem obcaecati expedita, aut soluta perspiciatis consequuntur nisi mollitia.</div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> CSS Grid2</title>
+    <style>
+        .wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1em;
+            grid-auto-rows: 100px;
+            grid-auto-rows: minmax(100px, auto);
+        }
+        .nested {
+            display: grid;
+            grid-template-columns: repeat (3, 1fr);
+            grid-auto-rows: 25px;
+            grid-gap: 1em;
+            
+        }
+        .wrapper div{
+        background-color: lightblue;
+            padding:1em;
+        }
+        .nested > div {
+            border: black dotted 1px;
+            padding: 1em;
+        }
+        .wrapper > div:nth-child(odd){
+        background-color: lightcyan}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt repudiandae repellat fugiat enim aut non, aliquam aspernatur sequi, exercitationem, deleniti ipsa ipsum quam id. Fugiat!</div>
+        <div class="nested">
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+        </div>
+            
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> CSS Grid3</title>
+    <style>
+        .wrapper{
+            display: grid;
+            background-color: aliceblue;
+            grid-template-columns: 1r 2fr 1fr;
+            }
+        .wrapper > div{
+            background: grey;
+            grid-template-columns: 1r 2fr 1fr;
+            padding: 1em;
+        }
+        .wrapper > div:nth-child(odd){
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+       <div class="box box1">Box1</div>
+       <div class="box box2">Box2</div>
+       <div class="box box3">Box3</div>
+       <div class="box box4">Box4</div>
+    </div>
+</body>
+</html>
